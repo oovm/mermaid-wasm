@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "scripts": {
+        "build": "node esbuild",
+        "test": "wee build && wasm-pack test --node"
+    },
+    "dependencies": {
+        "mermaid": "^8.8.2"
+    },
+    "devDependencies": {
+        "@types/mermaid": "^8.2.1",
+        "esbuild": "^0.7.17"
+    }
+}

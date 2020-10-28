@@ -1,0 +1,6 @@
+{
+    "private": true,
+    "scripts": {
+        "web": "cd projects/yew-mermaid-preview && trunk serve"
+    }
+}

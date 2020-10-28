@@ -1,0 +1,13 @@
+[workspace]
+members = ["projects/*"]
+default-members = [
+    "projects/wasmbind-mermaid",
+    "projects/yew-mermaid",
+    "projects/yew-mermaid-preview",
+]
+exclude = [
+    "projects/.DS_Store",
+]
+
+[profile.release]
+lto = true

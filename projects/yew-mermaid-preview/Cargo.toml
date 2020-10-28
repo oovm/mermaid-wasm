@@ -1,0 +1,12 @@
+[package]
+name = "yew-mermaid-preview"
+publish = false
+version = "0.1.0"
+authors = ["Aster <192607617@qq.com>"]
+readme = "../../Readme.md"
+license = "MPL-2.0"
+edition = "2018"
+
+[dependencies]
+yew = "0.17"
+yew-mermaid = {version = "0.1", path = "../yew-mermaid" }

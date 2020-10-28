@@ -2,7 +2,8 @@
     "private": true,
     "scripts": {
         "build": "node esbuild",
-        "test": "wee build && wasm-pack test --node"
+        "test": "wee build && wasm-pack test --node",
+        "up": "cargo publish --allow-dirty"
     },
     "dependencies": {
         "mermaid": "^8.8.2"

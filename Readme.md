@@ -1,30 +1,24 @@
-KaTeX for Yew
-=============
+Mermaid.js for Yew
+==================
 
-Render math with KaTeX in Yew!
+Render diagram with Mermaid.js in Yew!
 
-- The online preview: https://galaster.github.io/yew-katex
+- The online preview: https://galaster.github.io/yew-mermaid.js
 
 ## How to use
 
-1. When `auto-cdn` feature is enable, CDN will be inserted to head when the first component of this type is loaded.
+1. No CDN needed
 
-If you want to manage CDN by yourself, you can disable this feature and manually import it
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/mermaid.min.css">
-```
-
-2. Easily added using `<KaTeX/>`
+2. Easily added using `<Mermaid/>`
 
 ```rust
-use yew_katex::KaTeX;
+use yew_mermaid::Mermaid;
 
 html! {
-    <KaTeX math="\\KaTeX" inline=false/>
+    <Mermaid code=&self.input theme="neutral"/>
 }
 ```
 
 ## Todo
 
-- [x] Automatically import css cdn when the first component is loaded
+- [ ] Fix the problem that the entire wasm vm crashes when rendering errors

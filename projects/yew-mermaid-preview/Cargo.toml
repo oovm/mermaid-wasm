@@ -9,4 +9,4 @@ edition = "2018"
 
 [dependencies]
 yew = "0.17"
-yew-mermaid = {version = "0.1", path = "../yew-mermaid" }
+yew-mermaid = {version = "0.2", path = "../yew-mermaid" }

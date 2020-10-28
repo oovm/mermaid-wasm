@@ -1,6 +1,6 @@
 [package]
 name = "yew-mermaid"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Aster <192607617@qq.com>"]
 description = "Render math with KaTeX in Yew!"
 repository = "https://github.com/GalAster/yew-mermaid.js"
@@ -16,5 +16,4 @@ mermaid-wasmbind = {version = "0.1", path = "../wasmbind-mermaid" }
 
 
 [features]
-default = ["auto-cdn"]
-auto-cdn = []
+default = []

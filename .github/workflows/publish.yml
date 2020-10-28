@@ -24,7 +24,7 @@ jobs:
           brew install trunk
       - name: Build website 💣
         run: |
-          cd projects/yew-katex-preview
+          cd projects/yew-mermaid-preview
           wasm-bindgen -V
           trunk -V
           trunk build --release

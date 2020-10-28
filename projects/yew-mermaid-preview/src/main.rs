@@ -36,11 +36,9 @@ impl Component for Model {
     fn create(_: Self::Properties, link: ComponentLink<Self>) -> Self {
         let storage = StorageService::new(Area::Local).expect("storage was unavailable!");
         let input = {
-            match storage.restore("tex") {
-                Json(Ok(restored_model)) => restored_model,
-                _ => {
-                    String::from(include_str!("placehold.md"))
-                }
+            match storage.restore("mermaid") {
+                Json(Ok(restored)) => restored,
+                _ => String::from(include_str!("placehold.md")),
             }
         };
         Self { link, storage, input }
@@ -50,7 +48,7 @@ impl Component for Model {
         match msg {
             Event::Input(s) => {
                 self.input = s;
-                self.storage.store("tex", Json(&self.input))
+                self.storage.store("mermaid", Json(&self.input))
             }
         }
         true
@@ -66,11 +64,11 @@ impl Component for Model {
                 {header_view()}
                 <main>
                 <textarea
-                     placeholder="Input LaTeX"
+                     placeholder="Input mermaid code"
                      value=&self.input
                      oninput=self.link.callback(|input: InputData| Event::Input(input.value))
                  />
-                <div><label>{"KaTeX Output:"}</label></div>
+                <div><label>{"Mermaid output svg:"}</label></div>
                 <Mermaid code=&self.input/>
                 </main>
             </>
